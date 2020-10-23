@@ -1,0 +1,196 @@
+.single-tin_tuc {
+    ul {
+        list-style: disc;
+        padding-left: 1rem;
+    }
+}
+
+.blog {
+    &__title {
+        line-height: 1;
+        font-size: 1.5rem;
+        a {
+            color: $body-color;
+            font-weight: $font-weight-bold;
+            font-size: 1rem;
+            &:hover {
+                color: $primary
+            }
+        }
+    }
+    &__date {
+        color: $gray-600;
+    }
+    &__tag {
+        flex-flow: wrap;
+        .single-tin_tuc & {
+            list-style: none;
+            padding: 0;
+        }
+    }
+    &__des {
+        text-align: justify;
+    }
+    &__image {
+        margin-bottom: .5rem
+    }
+}
+
+ul.blog__tag {
+    padding-left: 0;
+    list-style: none;
+}
+
+// BLOG DETAILS
+.blog-details {
+    h3 {
+        font-size: 1.5rem;
+    }
+    h4 {
+        font-size: 1.2rem;
+    }
+    &__cat {
+        font-size: rem(20);
+        padding-bottom: 5px;
+        a {
+            @include link();
+        }
+    }
+    &__title {
+        font-size: 1.8rem;
+    }
+    &__main-wrap {
+        b,
+        strong {
+            font-weight: 700;
+        }
+        >table td {
+            padding: 1rem;
+            border: 1px solid;
+        }
+        >table {
+            margin-bottom: 1rem;
+        }
+    }
+    &__share {
+        ul {
+            padding: 0;
+        }
+        li {
+            width: 25px;
+            height: 25px;
+            a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+                font-size: rem(25);
+                color: $body-color;
+                span {
+                    display: block;
+                }
+            }
+        }
+        .icon_copylink {
+            a {
+                background-color: lighten($color: #000000, $amount: 30);
+                font-size: 1.1rem;
+                border-radius: 3px;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $white;
+                &:active,
+                &:hover,
+                &:focus {
+                    background-color: #a9a9a9
+                }
+            }
+        }
+        .zalo {
+            margin-top: -1px;
+            a {
+                border: 2px solid $body-color;
+                border-radius: 100%;
+                text-align: center;
+                font-size: 9px;
+                line-height: 22px;
+            }
+        }
+        .social {
+            &_facebook_square {
+                color: #365491
+            }
+            &_instagram {
+                background: #f09433;
+                background: -moz-linear-gradient(45deg, #405de6 0%, #5851db 15%, #833ab4 25%, #c13584 50%, #e1306c 75%, #fd1d1d 100%);
+                background: -webkit-linear-gradient(45deg, #405de6 0%, #5851db 15%, #833ab4 25%, #c13584 50%, #e1306c 75%, #fd1d1d 100%);
+                background: linear-gradient(45deg, #405de6 0%, #5851db 15%, #833ab4 25%, #c13584 50%, #e1306c 75%, #fd1d1d 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            &_twitter_square {
+                color: #1DA1F2;
+            }
+            &_linkedin_square {
+                color: #0274B3
+            }
+        }
+    }
+}
+
+// SIDEBAR BLOG
+.sidebar-blog {
+    .blog__wrap:last-child {
+        border-bottom: 0;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .blog {
+        &__wrap .row.content-row:last-child {
+            .border-bottom-dark {
+                border: 0
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .blog-details {
+        h3 {
+            font-size: 1.2rem;
+        }
+        h4 {
+            font-size: 1rem;
+        }
+        &__title {
+            font-size: 1.3rem;
+        }
+        &__cat {
+            font-size: 1rem
+        }
+    }
+    .sidebar-blog .blog__title {
+        font-size: 1.5rem;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .single-post .entry-content figure {
+        width: 100% !important;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .blog-details__main-wrap {
+        iframe {
+            width: 100%
+        }
+    }
+}
+
+.wp-block-table table td {
+    border: 1px solid #000;
+    padding: 1rem;
+}

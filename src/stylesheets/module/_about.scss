@@ -1,0 +1,373 @@
+.signature-line {
+    width: 5rem;
+    height: .5rem;
+    display: inline-block;
+    background-color: $primary;
+}
+
+.newspaper-style span {
+    float: left;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3rem;
+    height: 3rem;
+    text-transform: uppercase;
+    margin-left: -3px;
+    padding-right: 5px;
+}
+
+.our-story__wrap {
+    display: flex;
+    align-items: center;
+    .text-bg {
+        h1 {
+            font-family: "commerceB";
+            font-size: 7rem;
+            text-align: right;
+            color: transparent;
+            background: url('../images/bg-text.jpg') 0 0/cover;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-attachment: fixed;
+            white-space: nowrap;
+        }
+    }
+    .text-wrap {
+        padding: 5rem 8rem;
+        text-align: justify;
+        border: 6px solid $primary;
+        border-left: 0;
+        position: relative;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 5rem;
+            left: 0;
+            background-color: $primary;
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            bottom: 0
+        }
+        .newspaper-style {
+            line-height: rem(25);
+        }
+    }
+}
+
+.our-process {
+    .summary {
+        font-size: 13pt;
+    }
+    .col-bg {
+        background: rgb(1, 35, 102);
+        background: linear-gradient(180deg, rgba(1, 35, 102, 1) 0%, rgba(16, 111, 174, 1) 50%, rgba(30, 187, 244, 1) 100%);
+        width: 100%;
+        height: 100%;
+    }
+    .col-right {
+        margin-left: -10.5%
+    }
+    &__timeline {
+        font-size: 12pt;
+    }
+    &__row {
+        &:first-child {
+            margin-top: 2.5rem;
+        }
+        &:last-child {
+            .square-line {
+                display: none;
+            }
+            .line {
+                display: none;
+            }
+        }
+    }
+    .year {
+        font-family: "commerceB";
+        color: #fff;
+        border: 2px solid #fff;
+        border-right: 0;
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        font-size: 1.5rem;
+        position: relative;
+        &:after {
+            width: 2px;
+            height: 70%;
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #fff;
+        }
+    }
+    .line {
+        width: 2px;
+        height: calc(100% - 4rem);
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        left: calc((100% - 35px)/2);
+    }
+    .square-line {
+        margin: 2rem 0 2rem -14%;
+        .square {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            margin: 0 7px;
+            background: #000;
+        }
+    }
+}
+
+.our-purpose {
+    background: url('../images/purpose-bg.jpg') bottom/cover no-repeat;
+}
+
+.our-core {
+    &-values {
+        background-color: #F3F3F3;
+        position: relative;
+        h2.special-text {
+            font-size: 2.5rem;
+            font-family: "commerceB";
+        }
+        .content-text {
+            padding: 5rem 3rem;
+            border: 6px solid $primary;
+            border-right: 0;
+            position: relative;
+            margin: 7rem 0;
+            &:after {
+                width: 6px;
+                height: 80%;
+                content: "";
+                bottom: 0;
+                position: absolute;
+                right: 0;
+                background-color: $primary;
+            }
+        }
+        .col-left {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            max-width: 425px;
+        }
+        .imm-slogan {
+            padding: 8px 0;
+            border-top: 4px solid #262626;
+            border-bottom: 4px solid #262626;
+            font-size: 2.8rem;
+            line-height: 1;
+            white-space: nowrap;
+            font-family: "commerceB";
+        }
+        &__title {
+            max-width: 425px;
+            margin: 0 auto 0 10rem;
+            h2 {
+                font-family: "commerceB";
+            }
+        }
+    }
+}
+
+.our-philosophy {
+    background: url("../images/water-bg.jpg") center bottom/100% no-repeat;
+    .content {
+        &-panel {
+            border-left: 1.2rem solid $primary;
+            padding: 4rem 2rem;
+        }
+        &-text {
+            padding: 2rem;
+        }
+    }
+    &__title {
+        font-size: 2.5rem;
+        position: relative;
+        font-family: "commerceB";
+        &:after {
+            content: "";
+            width: 120%;
+            height: 1px;
+            background-color: $primary;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            margin-left: -50vw;
+            z-index: 11;
+        }
+    }
+}
+
+.leadership {
+    &__img {
+        img {
+            margin: auto;
+            border: 1px solid #dee2e6;
+        }
+    }
+    &__content {
+        h3 {
+            font-size: rem(18);
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .our-philosophy .content-text {
+        padding-bottom: 23rem;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .our-story__wrap {
+        .text-wrap {
+            padding: 5%;
+        }
+        .text-bg h1 {
+            font-size: 5rem;
+        }
+    }
+    .our-process {
+        .line {
+            left: calc((100% - 10px)/2);
+        }
+        .col-right {
+            margin-left: -12%;
+        }
+    }
+    .our-core-values .imm-slogan {
+        font-size: 2rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .our-process {
+        .col-right {
+            margin-left: -15%;
+        }
+        &__text {
+            padding-left: 2rem;
+        }
+        .square-line {
+            margin: 2rem 0 2rem -18%;
+        }
+    }
+    .our-core {
+        &-values {
+            .col-left {
+                position: static;
+                padding-top: 5rem;
+                max-width: 100%;
+            }
+            .content-text {
+                margin-top: 0
+            }
+            .imm-slogan {
+                font-size: 3.5rem;
+            }
+            &__title {
+                margin: 0 auto 2rem;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .our-story__wrap {
+        flex-direction: column;
+        .text-wrap:after {
+            height: 60%;
+        }
+        .text-bg h1 {
+            white-space: normal;
+            text-align: center;
+            line-height: 1.2;
+            br {
+                display: none;
+            }
+        }
+    }
+    .our-process {
+        .col-right {
+            margin-left: 0;
+        }
+        .year {
+            color: $secondary;
+            border: 2px solid $secondary;
+            margin: auto;
+        }
+        .line {
+            background: $secondary;
+            left: calc((100% + 10px)/2);
+        }
+        .square-line {
+            margin: 1rem 0 1rem -2%;
+            .square.bg-white {
+                background-color: $secondary !important;
+            }
+        }
+        &__text {
+            padding-left: 1rem;
+        }
+        img {
+            max-width: 250px;
+        }
+    }
+    .our-core-values .imm-slogan {
+        font-size: 2.5rem;
+    }
+    .our-philosophy {
+        .content-text {
+            padding: 2rem 0;
+        }
+        &__title {
+            font-size: 1.6rem;
+        }
+        .content-panel {
+            padding: 3rem 0 3rem 1rem;
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .our-story__wrap .text-bg h1 {
+        font-size: 3rem;
+    }
+    .our-process img {
+        max-width: 100%;
+    }
+    .our-core-values .col-left {
+        padding-top: 2rem;
+    }
+    .our-core-values {
+        .content-text {
+            padding: 1rem;
+            margin: 0 0 4rem;
+        }
+        .imm-slogan {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.partner__item {
+    img {
+        margin: auto;
+        border: 1px solid #ddd;
+    }
+    &:hover img {
+        opacity: .6;
+    }
+}

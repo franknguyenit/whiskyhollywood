@@ -1,0 +1,317 @@
+{% extends 'layouts/application.html' %}{% block bodyClass %}class="visa-kinh-doanh-E-2"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<!-- Breadcrumb  -->
+{% include "modules/component/breadcrumb.html" %}
+<!-- End breadcrumb  -->
+<div class="entry-content container">
+    <!--form class="eventform stepform scrollTo" id="stepForm">
+        <div id="form_show" class="row py-md-5"> 
+            <div class="col-md-8 offset-md-2 "> 
+                <h2 class="title h4 text-uppercase mb-4 text-center">ĐĂNG KÝ THAM DỰ TỌA ĐÀM TRỰC TUYẾN</h4>
+                <p><i>Anh chị vui lòng điền các thông tin bên dưới.<br>Chuyên viên tư vấn của IMM Group sẽ liên hệ xác nhận thông tin và gửi hướng dẫn cách thức tham dự tọa đàm.</i></p>
+                <fieldset id="step_1" >
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="mb-1">Họ và tên</label>
+                                <input id="txtname" class="form-control register__input required" name="name" type="text" autocomplete="off">					
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="mb-1">Email</label>
+                                <input id="txtemail" class="form-control register__input required email" type="text" name="email" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="mb-1">Số điện thoại</label>
+                                <input id="txtphone" class="form-control register__input required number" type="text" name="phone" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="mb-1">Giới tính</label>
+                                <select id="gender" runat="server" class="form-control">
+                                    <option value="">Lựa chọn giới tính</option>
+                                    <option value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group" id="areatext">
+                                <label class="mb-1">Địa điểm anh chị đang ở</label>
+                                <select id="areamy" runat="server" class="form-control">
+                                    <option value="">Lựa chọn địa điểm</option>
+                                    <option value="Phía Bắc">Phía Bắc</option>
+                                    <option value="Phía Nam">Phía Nam</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                            </div>
+                            <div class="form-group d-none" id="showarea">
+                                <label class="mb-1">Địa điểm khác</label>
+                                <input id="txtkhuvuckhac" class="form-control register__input" type="text" name="khuvuckhac" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="mb-1">Có yêu cầu khác cần tư vấn</label>
+                                <input id="txtnhucaukhac" class="form-control register__input" type="text" name="nhucaukhac" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" name="next" class="next action-button" value="Kế tiếp" />
+                </fieldset>		
+                <fieldset id="step_2" class="step-end">
+                    <h4>Thông tin để thẩm định hồ sơ</h4>
+                    <div class="form-group text-left">
+                        <label class="mb-1">1. Anh chị đang ở độ tuổi từ 18-50 tuổi?</label>
+                        <label class="check-content">
+                            Có
+                            <input id="old1" class="" type="radio" name="old" value="Có" checked />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Không
+                            <input  id="old2" class="" type="radio" name="old" value="Không" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                    </div>
+                    <div class="form-group text-left">
+                        <label class="mb-1">2. Anh chị đã từng có kinh nghiệm làm việc liên tục và lâu dài (ít nhất 3 năm) về 1 ngành nghề?</label>
+                        <label class="check-content">
+                           Có
+                            <input id="kinhnghiem1" class="" type="radio" name="kinhnghiem" value="Có" checked/>
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Không
+                            <input  id="kinhnghiem2" class="" type="radio" name="kinhnghiem" value="Không" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                      
+                    </div>
+                    <div class="form-group text-left">
+                        <label class="mb-1">3. Ngành nghề chuyên môn và chức vụ hiện tại của anh chị? </label>
+                        <input id="nganhnghe" class="form-control register__input " type="text" name="nganhnghe" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">4. Ở thời điểm hiện tại, anh chị có khả năng tiếng Anh từ IELTS 4.0 (General) hoặc chứng chỉ tiếng Pháp TEF/TCF (chưa phải nộp bằng ngay)?</label>
+                        <label class="check-content">
+                            Có
+                             <input id="tienganh1" class="" type="radio" name="tienganh" value="Có" checked/>
+                             <span class="checkmark radio"></span>
+                         </label>
+                         <label class="check-content">
+                             Không
+                             <input  id="tienganh2" class="" type="radio" name="tienganh" value="Không" />
+                             <span class="checkmark radio"></span>
+                         </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">5. Anh chị có nguồn tiền mặt/sổ tiết kiệm tối thiểu 8.922CAD (~152 triệu VND)?</label>
+                        <label class="check-content">
+                            Có
+                             <input id="tienmat1" class="" type="radio" name="tienmat" value="Có" checked />
+                             <span class="checkmark radio"></span>
+                         </label>
+                         <label class="check-content">
+                             Không
+                             <input  id="tienmat2" class="" type="radio" name="tienmat" value="Không" />
+                             <span class="checkmark radio"></span>
+                         </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">6. Năm sinh của con lớn nhất đi kèm hồ sơ?</label>
+                        <input id="namsinhcon" class="form-control register__input " type="text" name="namsinhcon" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">7. Có yêu cầu khác cần tư vấn </label>
+                        <input id="yeucautuvankhac" class="form-control register__input" type="text" name="yeucautuvankhac" autocomplete="off">
+                    </div>
+                    <input type="button" name="previous" class="previous action-button" value="Quay lại" />
+                    <input type="button" value="Hoàn tất đăng ký" data-area="CANADASkilledWorker102020" class="next action-button register__btn">
+                </fieldset>	  
+            </div>
+        </div>
+   </form-->
+    
+
+   <form class="eventform stepform scrollTo" id="stepForm">
+    <div id="form_show" class="row py-md-5"> 
+        <div class="col-md-8 offset-md-2 "> 
+            <h2 class="title h4 text-uppercase mb-4 text-center">ĐĂNG KÝ THAM DỰ TỌA ĐÀM TRỰC TUYẾN</h4>
+            <p><i>Anh chị vui lòng điền các thông tin bên dưới.<br>Chuyên viên tư vấn của IMM Group sẽ liên hệ xác nhận thông tin và gửi hướng dẫn cách thức tham dự tọa đàm.</i></p>
+            <fieldset id="step_1" >
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="mb-1">Họ và tên</label>
+                            <input id="txtname" class="form-control register__input required" name="name" type="text" autocomplete="off">					
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="mb-1">Email</label>
+                            <input id="txtemail" class="form-control register__input required email" type="text" name="email" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="mb-1">Số điện thoại</label>
+                            <input id="txtphone" class="form-control register__input required number" type="text" name="phone" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="mb-1">Giới tính</label>
+                            <select id="gender" runat="server" class="form-control">
+                                <option value="">Lựa chọn giới tính</option>
+                                <option value="Nam">Nam</option>
+                                <option value="Nữ">Nữ</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group" id="areatext">
+                            <label class="mb-1">Địa điểm anh chị đang ở</label>
+                            <select id="areamy" runat="server" class="form-control">
+                                <option value="">Lựa chọn địa điểm</option>
+                                <option value="Phía Bắc">Phía Bắc</option>
+                                <option value="Phía Nam">Phía Nam</option>
+                                <option value="Khác">Khác</option>
+                            </select>
+                        </div>
+                        <div class="form-group d-none" id="showarea">
+                            <label class="mb-1">Địa điểm khác</label>
+                            <input id="txtkhuvuckhac" class="form-control register__input" type="text" name="khuvuckhac" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="mb-1">Có yêu cầu khác cần tư vấn</label>
+                            <input id="txtnhucaukhac" class="form-control register__input" type="text" name="nhucaukhac" autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group" >
+                            <label class="mb-1">Anh chị quan tâm đến chương trình định cư Canada diện Doanh nhân hay diện Khởi nghiệp (Start-up Visa)?</label>
+                            <select id="chuongtrinh" class="form-control required">
+                                <option value="">Lựa chọn chương trình</option>
+                                <option value="Định cư Canada diện Doanh nhân">Định cư Canada diện Doanh nhân</option>
+                                <option value="Định cư Canada diện Start-up Visa">Định cư Canada diện Start-up Visa </option>
+                                <option value="Chưa biết rõ"> Chưa biết rõ</option>
+                            </select>
+                        </div>
+                    </div>
+                  
+                </div>
+                <input type="button" name="next" class="next action-button" value="Kế tiếp" />
+            </fieldset>		
+            <fieldset id="step_2" class="step-end">
+                <div class="form-group text-left">
+                    <label class="mb-1">1. Phương án mà anh chị muốn đầu tư?</label>
+                    <label class="check-content">
+                        Thành lập/mua lại doanh nghiệp có sẵn tại Canada với mức từ 150.000CAD (2,6 tỷ đồng) đến 250.000CAD (4,2 tỷ đồng) tùy tỉnh bang để lấy quyền cư trú/thường trú Canada theo diện Doanh nhân
+                        <input id="optioninvest1" class="" type="radio" name="optioninvest" value="Thành lập/mua lại doanh nghiệp có sẵn tại Canada với mức từ 150.000CAD (2,6 tỷ đồng) đến 250.000CAD (4,2 tỷ đồng) tùy tỉnh bang để lấy quyền cư trú/thường trú Canada theo diện Doanh nhân" checked />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">
+                        Thành lập/mở doanh nghiệp mới tại Canada với mức từ 2,6 tỷ đồng (150.000CAD) lấy quyền thường trú theo diện Khởi nghiệp (Start-up Visa)
+                        <input  id="optioninvest2" class="" type="radio" name="optioninvest" value="Thành lập/mở doanh nghiệp mới tại Canada với mức từ 2,6 tỷ đồng (150.000CAD) lấy quyền thường trú theo diện Khởi nghiệp (Start-up Visa)" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                </div>
+                <div class="form-group text-left">
+                    <label class="mb-1">2. Anh chị có sở hữu doanh nghiệp tại Việt Nam không?</label>
+                    <label class="check-content">
+                        Có 
+                        <input id="sohuudoanhnghiep1" class="" type="radio" name="sohuudoanhnghiep" value="Có" checked/>
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">
+                        Không
+                        <input  id="sohuudoanhnghiep2" class="" type="radio" name="sohuudoanhnghiep" value="Không" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                </div>
+                <div class="form-group text-left">
+                    <label class="mb-1">3. Anh chị có là quản lý cấp cao (giám đốc/ phó giám đốc) của công ty tại Việt Nam không?</label>
+                    <label class="check-content">
+                        Có
+                        <input id="position1" class="" type="radio" name="position" value="Có" checked/>
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">
+                        Không
+                        <input id="position2" class="" type="radio" name="position" value="Không" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">4. Tính đến hiện tại, anh chị đã sở hữu doanh doanh nghiệp hoặc là quản lý cấp cao được bao nhiêu năm?</label>
+                    <input id="sohuudoanhnghiep" class="form-control register__input required" type="text" name="sohuudoanhnghiep">
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">5. Số % cổ phần sở hữu doanh nghiệp tại Việt Nam? </label>
+                    <input id="phamtramcophan" class="form-control register__input required" type="text" name="phamtramcophan">
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">6. Trình độ tiếng Anh của anh chị ở thời điểm hiện tại?</label>
+                    <label class="check-content">
+                        Đã có bằng tương đương IELTS từ 5.0 trở lên
+                        <input id="tienganh1" class="" type="radio" name="tienganh" value="Đã có bằng tương đương IELTS từ 5.0 trở lên" checked/>
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">
+                        Nghe, nói, đọc, viết lưu loát để kinh doanh với đối tác nước ngoài
+                        <input id="tienganh2" class="" type="radio" name="tienganh" value="Nghe, nói, đọc, viết lưu loát để kinh doanh với đối tác nước ngoài" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">
+                        Giao tiếp cơ bản
+                        <input id="tienganh3" class="" type="radio" name="tienganh" value="Giao tiếp cơ bản" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">
+                        Chưa biết rõ
+                        <input id="tienganh4" class="" type="radio" name="tienganh" value="Chưa biết rõ" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">
+                        Cần hỗ trợ thông dịch
+                        <input id="tienganh5" class="" type="radio" name="reason" value="Cần hỗ trợ thông dịch" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">7. Tuổi của con lớn nhất đi kèm hồ sơ</label>
+                    <input id="tuoicon" class="form-control register__input required" type="text" name="namsinhcon" >
+                </div>
+                <div class="form-group">
+                    <label class="mb-1">8. Yêu cầu khác cần tư vấn</label>
+                    <input id="namsinhcon" class="form-control register__input" type="text" name="namsinhcon" >
+                </div>
+                <input type="button" name="previous" class="previous action-button" value="Quay lại" />
+                <input type="button" value="Hoàn tất đăng ký" data-area="IrelandPortugal102020" class="next action-button register__btn">
+            </fieldset>	  
+        </div>
+    </div>
+</form>
+</div>
+
+
+<!-- end blog  -->
+{% include "modules/component/register-footer.html" %}
+<!-- end register -->
+{% endblock %}

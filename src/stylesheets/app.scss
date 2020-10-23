@@ -1,0 +1,39 @@
+@import './base/setting';
+//lib
+@import "./node_modules/bootstrap/scss/bootstrap";
+@import "./node_modules/bootstrap-select/dist/css/bootstrap-select";
+@import "../../node_modules/owl.carousel/src/scss/owl.carousel.scss";
+@import "./lib/elegant-icon";
+//base
+@import "./base/mixins";
+@import "./base/normalize";
+@import "./base/base";
+@import "./base/button";
+@import "./base/custom";
+@import "./base/animation";
+@import "./base/hover";
+@import "./base/general";
+@import "./base/font";
+@import "./base/function";
+// module 
+@import "./module/header";
+@import "./module/header-event";
+@import "./module/footer";
+@import "./module/home-page";
+@import "./module/compare-nation";
+@import "./module/product-page";
+@import "./module/contact-page";
+@import "./module/event-page";
+@import "./module/about";
+@import "./module/menu";
+@import "./module/page-404";
+@import "./module/page-FDI";
+@import "./module/home-page-EN";
+//component
+@import "./component/form";
+@import "./component/register-form";
+@import "./component/social";
+@import "./component/breadcrumb";
+@import "./component/blog";
+@import "./component/pagination";
+@import "./component/img-custom";

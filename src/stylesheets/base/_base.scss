@@ -1,0 +1,78 @@
+*:focus,
+button:focus,
+input:focus,
+*,
+input,
+button,
+*:active,
+input:active,
+button:active,
+.bootstrap-select .btn:focus,
+option {
+    outline: none !important;
+    outline: 0px !important;
+}
+
+html {
+    overflow-x: hidden;
+    margin: 0 auto;
+    //scroll-behavior: smooth;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.entry-content {
+    ul {
+        list-style: inherit;
+        align-items: unset;
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+        padding-inline-start: rem(40);
+        ul {
+            list-style-type: circle;
+        }
+    }
+    figcaption {
+        text-align: center;
+        margin-top: 0
+    }
+}
+
+ul.select-options{
+    padding-left: 0;
+}
+
+
+.single-post .entry-content {
+    figcaption {
+        background-color: rgb(237, 237, 237);
+        padding: 0.7rem;
+        font-size: rem(14);
+        margin-top: 0
+    }
+    figure {
+        max-width: 100%;
+    }
+}
+
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    transition: $transition-base;
+    @include hover-focus-active {
+        text-decoration: none;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
