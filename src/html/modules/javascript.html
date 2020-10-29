@@ -111,15 +111,13 @@
         $script(['js/slinky.js','js/jquery.validate.js', 'javascripts/app.js'], 'myScript', function() {
             $(function() {
                 window.slinky = $('#menu').slinky();
-
-                
-
             });
         });
     });
 
     $script.ready('myScript', function() {
 
+   
         $('.center').slick({
             centerMode: true,
             centerPadding: '60px',

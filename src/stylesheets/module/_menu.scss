@@ -2,6 +2,7 @@
 .slinky-menu {
     overflow: hidden;
     transform: translateZ(0);
+    
     >ul {
         left: 0;
         position: relative;
@@ -46,7 +47,7 @@
     background: $menu-bg;
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 70px;
     z-index: 1;
     display: none;
     min-width: 20rem;
@@ -58,6 +59,10 @@
             width: 100%;
             line-height: 1.2;
         }
+        &:hover
+        {
+            color: $secondary;
+        }
     }
     li {
         line-height: 1;
@@ -66,6 +71,7 @@
         &:last-child {
             border-bottom: none;
         }
+       
     }
    
     .next::after{

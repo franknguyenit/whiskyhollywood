@@ -86,9 +86,8 @@
                     <div class="main-menu" id="main-menu">
                         <ul class="ul-menu">
                             <li><a href="/">Project Information</a></li>
-                            <li>
+                            <li class="menu-item-has-children">
                                 <a href="/bds-my.html">Latest Updates</a>
-                                <span class="icon-show d-lg-none"><i class="icommon icon-chevron-down"></i></span>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Tổng quan</a></li>
                                     <li><a href="#">Dự án</a></li>
@@ -98,9 +97,8 @@
                                     <li><a href="#">Tin tức về Mỹ</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li class="menu-item-has-children">
                                 <a href="/bds-uc.html">The Management Team</a>
-                                <span class="icon-show"><i class="icommon icon-angle-down"></i></span>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Tổng quan</a></li>
                                     <li><a href="#">Dự án</a></li>
@@ -115,31 +113,55 @@
                     </div>
                 </div>
                
-                <div class="col-md-4"></div>
-            </div>
-        </div>
-        <div class="header__search d-md-none">
-            <div class="header__switch-language switch-language">
-                <ul class="d-flex align-items-center">
-                    <li class="active"><a href="#!"><span>Vi</span></a></li>
-                    <li><a href="#!"><span>En</span></a></li>
-                </ul>
-            </div>
-            <a href="#!" id="btnSearch" class="btn-search">
-                <span class="header__icon icon_search"></span>
-            </a>
-        </div>
-        <div class="header__search-overlay">
-            <div class="search__overlay-content">
-                <div class="search__form">
-                    <label for="search__input">Search</label>
-                    <input type="text" id="search-input" name="search" class="search__input" placeholder="Tìm kiếm">
-                    <button type="button" class="search__submit">
-                        <span class="header__icon icon_search"></span>
-                    </button>
+                <div class="col-md-4 d-flex">
+                    <div class="head__contact">
+                        <a href="#!" class="btn btn-secondary">Contact us</a>
+                    </div>
+                    <div class=" ">
+                      
+                        <div class="header__switch-language switch-language">
+                            <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-dropdown-click js-wpml-ls-legacy-dropdown-click" id="lang_sel_click">
+                                <ul>
+                                   <li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-vi wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-dropdown-click">
+                                      <a href="#" class="js-wpml-ls-item-toggle wpml-ls-item-toggle lang_sel_sel icl-vi">
+                                         <noscript><img class="wpml-ls-flag iclflag" src="http://n.immigration.com.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/vi.png" alt=""></noscript>
+                                         <img class="wpml-ls-flag iclflag ls-is-cached lazyloaded" src="http://n.immigration.com.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/vi.png" data-src="http://n.immigration.com.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/vi.png" alt=""><span class="wpml-ls-native icl_lang_sel_native">Tiếng Việt</span>
+                                      </a>
+                                      <ul class="js-wpml-ls-sub-menu wpml-ls-sub-menu" style="visibility: visible;">
+                                         <li class="icl-en wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-last-item">
+                                            <a href="http://n.immigration.com.vn/en/" class="wpml-ls-link">
+                                               <noscript><img class="wpml-ls-flag iclflag" src="http://n.immigration.com.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt=""></noscript>
+                                               <img class="wpml-ls-flag iclflag ls-is-cached lazyloaded" src="http://n.immigration.com.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" data-src="http://n.immigration.com.vn/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.png" alt=""><span class="wpml-ls-display icl_lang_sel_translated">English</span>
+                                            </a>
+                                         </li>
+                                      </ul>
+                                   </li>
+                                </ul>
+                             </div>
+                        </div>
+                        
+                    </div>
+                    <div class="header__search">
+                        <a href="#!" id="btnSearch" class="btn-search">
+                            <span class="header__icon icon_search"></span>
+                        </a>
+                    </div>
+                    <div class="header__search-overlay">
+                        <div class="search__overlay-content">
+                            <div class="search__form">
+                                <label for="search__input">Search</label>
+                                <input type="text" id="search-input" name="search" class="search__input" placeholder="Tìm kiếm">
+                                <button type="button" class="search__submit">
+                                    <span class="header__icon icon_search"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <a class="btn-close" id="search_close"><span class="icon_close"></span></a>
+                    </div>
                 </div>
             </div>
-            <a class="btn-close" id="search_close"><span class="icon_close"></span></a>
         </div>
+        
+        
     </div>
 </header>
