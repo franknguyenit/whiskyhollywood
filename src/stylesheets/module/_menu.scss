@@ -14,6 +14,7 @@
     }
     ul {
         width: 100%;
+        padding: 10px 15px;
     }
     a {
         align-items: center;
@@ -60,18 +61,13 @@
     }
     li {
         line-height: 1;
-        border-bottom: 1px solid $menu-border-color;
+        border-bottom: 1px solid $secondary;
+        background: none;
         &:last-child {
             border-bottom: none;
         }
     }
-    a:not(.back) {
-        color: $menu-color;
-        @include hover-focus-active {
-            background: $menu-bg-hover;
-            color: $menu-color-hover;
-        }
-    }
+   
     .next::after{
         @include icon-font('\35', 1.5rem, 1rem);
     }

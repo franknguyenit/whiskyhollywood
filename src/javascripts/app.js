@@ -14,10 +14,8 @@ globalSite.openMenu();
 globalSite.SearchBoxEffect();
 globalSite.selectCustom();
 globalSite.scrollTop();
-//globalSite.showStickyRegister();
 globalSite.compareSameHeight();
 globalSite.blogDetailsCustom();
-//globalSite.customOwlSlide();
 globalSite.scrollToRegister();
 globalSite.linkTo();
 

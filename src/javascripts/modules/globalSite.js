@@ -1,6 +1,5 @@
 import bowser from 'bowser';
 import matchHeight from 'jquery-match-height';
-import owlCarousel from 'owl.carousel';
 class globalSite {
     static showContentWhenPageLoadFinish() {
         setTimeout(function() {
@@ -171,34 +170,6 @@ class globalSite {
             }
         });
     }
-    /*static customOwlSlide() {
-        $('.project__slider-img').owlCarousel({
-            margin: 15,
-            items: 2,
-            nav: true,
-            dots: false,
-            responsive: {
-                768: {
-                    items: 3,
-                },
-                1200: {
-                    mouseDrag: false,
-                    items: 3,
-                }
-            }
-        })
-        $('.owl-carousel.img__slide-bottom4').owlCarousel({
-            margin: 15,
-            items: 2,
-            nav: true,
-            responsive: {
-                768: {
-                    items: 4,
-                    mouseDrag: false,
-                },
-            }
-        })
-    }*/
     static scrollToRegister() {
         if ($(window).innerWidth() < 767) {
             $('.btn__register').click(function() {

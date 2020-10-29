@@ -12,16 +12,15 @@ $container-max-widths: ( sm: 540px, md: 750px, lg: 970px, xl: 1170px) !default;
 
 /*COLOR*/
 
-$primary:#cb0e12;
+$primary:#000033;
 $dark-primary:#b00e12;
-$secondary:#00327E;
+$secondary:#BC8D00;
 $black: #000;
 $white: #fff;
 
 /*BODY*/
 
-$font-family-base:'Roboto',
-sans-serif;
+$font-family-base:"Times New Roman", Times, serif;
 $body-bg: $white;
 $body-color: $black;
 $border-color: #909090;
