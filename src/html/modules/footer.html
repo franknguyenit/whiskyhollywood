@@ -1,22 +1,5 @@
 <footer id="footer" class="footer">
-    <div class="footer__top bg-black text-center text-white p-3">
-        <div class="container">
-            <div class="footer__social-wrap d-flex align-items-center justify-content-center">
-                <div class="d-inline-block d-md-flex mb-0 align-items-center">
-                    <span class="mr-md-3 font-14">Kết nối với chúng tôi</span>
-                    <span>{% include "modules/component/social.html" %}</span>
-                </div>
-                <ul class="footer__app app-group d-flex ml-md-4">
-                    <li class="mr-3">
-                        <a href="https://play.google.com/store/apps/details?id=com.immgroup.immcrm"><img src="../../images/google-play.jpg" alt="google-play"></a>
-                    </li>
-                    <li>
-                        <a href="https://apps.apple.com/us/app/imm-group/id1418437930?ls=1"><img src="../../images/apple-store.jpg" alt="apple-store"></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    
     <div class="footer__middle py-4 pt-md-5" data-module="mobileToggle">
         <div class="container">
             <div class="row">
@@ -72,111 +55,12 @@
             </div>
         </div>
     </div>
-    <div class="footer__bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center my-3">Quy định pháp lý | © 2019 IMM Group. Tất cả các quyền được bảo hộ</p>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- ------------------------------ -->
     <div class="overlay-layer"></div>
     <a href="#!" id="to_top" class="btn-secondary">top</a>
 
-    <div class="register__sticky btn__register" id="registerSticky1">
-        <a class="register__sticky-btn">
-            <h5 class="mb-0 font-14">Yêu cầu tư vấn</h5>
-            <!-- <span class="icon_close"></span> -->
-        </a>
-        <!-- <form action="#" class="register__sticky-form d-none">
-            <h5 class="register__sticky-title">Yêu cầu chuyên viên tư vấn gọi lại</h5>
-            <div class="input-group-panel">
-                <div class="form-group">
-                    <input type="text" class="form-control control-h" placeholder="Tên">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control control-h" placeholder="Số điện thoại">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control control-h" placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <select class="form-control control-h">
-                        <option value="hide">-Sản phẩm nhà đầu tư quan tâm -</option>
-                        <option value="Mỹ">Mỹ</option>
-                        <option value="Úc">Úc</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Các nước châu Âu">Các nước châu Âu</option>
-                        <option value="Vùng Caribbean">Vùng Caribbean</option>
-                        <option value="Chưa xác định">Chưa xác định</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <select class="form-control control-h">
-                        <option value="hide">-Quốc gia nhà đầu tư quan tâm -</option>
-                        <option value="Mỹ">Mỹ</option>
-                        <option value="Úc">Úc</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Các nước châu Âu">Các nước châu Âu</option>
-                        <option value="Vùng Caribbean">Vùng Caribbean</option>
-                        <option value="Chưa xác định">Chưa xác định</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <select class="form-control control-h">
-                        <option value="hide">-Văn phòng tư vấn-</option>
-                        <option>Phía Nam: Vp Tp. Hồ Chí Minh</option>
-                        <option>Phía Bắc: Vp Hà Nội</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <textarea class="form-control" cols="100" rows="3" placeholder="Nhu cầu khác cần được tư vấn"></textarea>
-                </div>
-                <div class="form-group mb-0 text-center">
-                    <div class="register__action">
-                        <input type="submit" value="Gửi" class="btn register__btn">
-                        <span class="ajax-loader"></span>
-                    </div>
-                </div>
-            </div>
-        </form> -->
-    </div>
-    <div class="evaluate__sticky">
-        <a class="evaluate__sticky-btn" data-toggle="modal" data-target="#evaluateModal">
-            <h5 class="mb-0 font-14">Đánh giá hồ sơ miễn phí</h5>
-        </a>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade evaluate__modal " id="evaluateModal" tabindex="-1" role="dialog" aria-labelledby="evaluateModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header evaluate__modal-header text-center">
-                    <h5 class="modal-title text-uppercase mx-auto " id="evaluateModalLabel">Đánh giá hồ sơ miễn phí</h5>
-                </div>
-                <div class="modal-body">
-                    <strong>Chọn quốc gia bạn quan tâm</strong>
-                    <div class="evaluate__modal-group mt-3">
-                        <div class="mb-2">
-                            <b class="text-primary">1.</b> <a href="https://crm.immgroup.com/surveys/l1a-form.aspx" target="_blank" rel="noopener noreferrer"> Định cư Mỹ</a>
-                        </div>
-                        <div class="mb-2">
-                            <b class="text-primary">2.</b> <a href="https://crm.immgroup.com/surveys/form-danh-gia-truc-tuyen-chuong-trinh-uc.aspx" target="_blank" rel="noopener noreferrer">Định cư Úc</a>
-                        </div>
-                        <div class="mb-2">
-                            <b class="text-primary">3.</b> <a href="https://crm.immgroup.com/surveys/form-danh-gia-truc-tuyen-chuong-trinh-chau-au.aspx" target="_blank" rel="noopener noreferrer">Quốc tịch & thường trú nhân Châu Âu</a>
-                        </div>
-                        <div class="mb-2">
-                            <b class="text-primary">4.</b> <a href="#!" target="_blank" rel="noopener noreferrer">Định cư Canada</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer evaluate__modal-footer">
-                    <button type="button" class="btn" data-dismiss="modal">Đóng</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
+   
+   
     {% include "modules/component/modal.html" %}
 </footer>

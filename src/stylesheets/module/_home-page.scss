@@ -65,76 +65,89 @@ body.home {
 }
 
 .hightights{
-    background: url("../images/highlight.png") no-repeat center top;
+    background: url("../images/highlight.png") no-repeat center bottom;
     .col-md-6{
         padding-right: 5px;
         padding-left: 5px;
-        &:nth-child(4n+3),
-        &:nth-child(4n+4)
+        .hightights__card
         {
-            .hightights__card{
+            &:nth-child(2n+2)
+           {
                 background: $primary;
                 color: #fff;
             }
         }
-       
     }
-
     &__card{
         display: flex;
         padding: 10px;
         background: #ffffffb5;
         margin: 5px 0;
-        
+        text-align: justify;
     }
     &__number{
         font-size: 24px;
         font-weight: 600;
-        padding: 15px 23px 15px 10px;
+        padding: 0 15px 0px 5px;
         align-items: center;
         justify-content: center;
         display: flex;
+        line-height: 25px;
     }
 }
 
-//--
-/* style for waterfall grid */
-.wf-container {
-    margin: 0 auto;
-}
-.wf-container:before,.wf-container:after {
-    content: '';
-    display: table;
-}
-.wf-container:after {
-    clear: both;
-}
-.wf-box {
-    margin: 10px;
-}
-.wf-box img { 
-    display: block;
-    width: 100%;
-}
-.wf-box .content {
-    border: 1px solid #ccc;
-    border-top-width: 0;
-    padding: 5px 8px;
-}
-.wf-column {
-    float: left;
+.project{
+    &__card{
+        position: relative;
+        margin-bottom: 7rem;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    &__icon{
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        top: -42px;
+    }
+    &__content{
+        padding: 5rem 1.2rem 1.2rem 1.2rem;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.4);
+        text-align: center;
+        min-height: 275px;
+    }
+    .col-md-4{
+        &:nth-child(2n+2){
+            .project__content{
+                background: #BCA76E;
+                color: $white;
+            }
+        }
+    }
 }
 
-@media screen and (min-width: 768px) {
-    .wf-container { width: 750px; }
+.term{
+    table.table-bordered{
+        border:2px solid #BCA76E;
+        margin-top:20px;
+      }
+    table.table-bordered > thead > tr > th{
+        border:2px solid  #BCA76E;
+    }
+    table.table-bordered > tbody > tr > td{
+        border:2px solid  #BCA76E;
+        padding: 0.75rem 4rem;
+    }
 }
-@media screen  and (min-width: 992px) {
-    .wf-container { width: 970px; }
+.industry{
+    h4{
+        font-family: commerceB,sans-serif;
+        font-size: 2.2rem;
+        color: $primary;
+    }
 }
-@media screen and (min-width: 1200px) {
-    .wf-container { width: 1170px; }
-}
-//--
+
 
 @include media-breakpoint-down(lg) {
     .service {

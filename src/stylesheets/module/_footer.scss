@@ -1,5 +1,5 @@
 .footer {
-    background-color: $footer-bacground;
+    background-color: $primary;
     color: $footer-text;
     font-size: rem(14);
     a {
@@ -29,10 +29,7 @@
     &__note {
         max-width: 65%;
     }
-    &__bottom {
-        background-color: $footer-bottom-background;
-        color: $footer-bottom-text
-    }
+    
 }
 
 @include media-breakpoint-down(md) {

@@ -106,7 +106,7 @@
     };
 
     $script([
-        'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js','//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js'
+        '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js'
     ], 'vendor', function() {
         $script(['js/slinky.js','js/jquery.validate.js', 'javascripts/app.js'], 'myScript', function() {
             $(function() {
@@ -117,32 +117,28 @@
 
     $script.ready('myScript', function() {
 
+
+    
+		$('.carousel .carousel-item').each(function() {
+			var minPerSlide = 4;
+			var next = $(this).next();
+			if (!next.length) {
+				next = $(this).siblings(':first');
+			}
+			next.children(':first-child').clone().appendTo($(this));
+
+			for (var i = 0; i < minPerSlide; i++) {
+				next = next.next();
+				if (!next.length) {
+					next = $(this).siblings(':first');
+				}
+
+				next.children(':first-child').clone().appendTo($(this));
+			}
+		});
+
    
-        $('.center').slick({
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 1,
-            responsive: [
-                {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
-                },
-                {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-                }
-            ]
-        });
+        
 
         $(".fancybox").fancybox({
             openEffect: "none",
