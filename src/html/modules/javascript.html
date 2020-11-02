@@ -105,8 +105,7 @@
         jsPath: 'javascripts/'
     };
 
-    $script([
-        '//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js'
+    $script(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'
     ], 'vendor', function() {
         $script(['js/slinky.js','js/jquery.validate.js', 'javascripts/app.js'], 'myScript', function() {
             $(function() {
@@ -119,7 +118,7 @@
 
 
     
-		$('.carousel .carousel-item').each(function() {
+		$('#releases__carousel.carousel .carousel-item').each(function() {
 			var minPerSlide = 4;
 			var next = $(this).next();
 			if (!next.length) {
@@ -140,16 +139,7 @@
    
         
 
-        $(".fancybox").fancybox({
-            openEffect: "none",
-            closeEffect: "none"
-        });
-        $(".zoom").hover(function(){
-            
-            $(this).addClass('transition');
-        }, function(){
-            $(this).removeClass('transition');
-        });
+      
 
     });
 

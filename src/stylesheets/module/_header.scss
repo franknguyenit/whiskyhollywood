@@ -27,6 +27,9 @@
     &__logo {
         flex-grow: 2;
         padding: .5rem;
+        .logo{
+            text-align: center;
+        }
     }
     &__icon {
         position: relative;
@@ -205,13 +208,14 @@
     margin: 0;
     padding: 0;
     color: #fff;
+    text-align: center;
     .menu-item-has-children{
         font-size: 20px;
         &::before{
             content: "\33";
             position: absolute;
             right: -12px;
-            top: 30px;
+            top: 27px;
             font-family: ElegantIcons;
             font-size: 1.6rem;
             display: inline-block;
@@ -302,20 +306,42 @@
 
 @media only screen and (max-width: 1269px) {
     .ul-menu {
+        .menu-item-has-children{
+            &::before{
+                top: 37px;
+            }
+        }
         a {
             padding: 30px 15px;
         }
     }
+    .header{
+        &__logo{
+            .logo{
+                text-align: right;
+            }
+        }
+    }
+
 }
 
 
 
 @include media-breakpoint-down(md) {
     .header__toggle-menu {
-        width: 4rem
+        width: 4rem;
+        left: 0;
+    }
+    .header__logo {
+        .logo{
+            text-align: center;
+        }
     }
     .header__bottom {
         padding: .2rem 1rem;
+    }
+    .head__contact{
+        display: none;
     }
 
     //--
@@ -484,13 +510,7 @@
     .img-logo {
         position: inherit;
     }
-    #header {
-        background: #fff;
-        &:hover,
-        &.fixed-menu {
-            background: #fff;
-        }
-    }
+  
     .logoproduct2 {
         padding-top: 10px;
     }
@@ -507,7 +527,7 @@
                 &::before,
                 &::after {
                     .fixed-menu & {
-                        background-color: $primary;
+                        background-color: #fff;
                     }
                 }
             }
@@ -562,13 +582,6 @@
     }
     .img-logo {
         position: inherit;
-    }
-    #header {
-        background: #fff;
-        &:hover,
-        &.fixed-menu {
-            background: #fff;
-        }
     }
     .logoproduct2 {
         padding-top: 10px;

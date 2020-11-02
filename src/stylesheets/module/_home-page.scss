@@ -66,6 +66,7 @@ body.home {
 
 .hightights{
     background: url("../images/highlight.png") no-repeat center bottom;
+    background-size: cover;
     .col-md-6{
         padding-right: 5px;
         padding-left: 5px;
@@ -147,6 +148,18 @@ body.home {
         color: $primary;
     }
 }
+.gallery{
+    .img-fluid{
+        padding: 5px;
+    }
+    .carousel-caption{
+        background: $primary;
+        width: 100%;
+        left: 0;
+        padding: 0;
+        bottom: 0;
+    }
+}
 
 
 @include media-breakpoint-down(lg) {
@@ -188,6 +201,21 @@ body.home {
         }
         &__select-group {
             margin: 1rem 0;
+        }
+    }
+    .project{
+        &__content{
+            min-height: auto;
+            padding: 4rem 1rem 1rem 1rem;
+        }
+        &__card{
+            margin-bottom: 4rem;
+        }
+    }
+    .term{
+        table.table-bordered > tbody > tr > td{
+            border:2px solid  #BCA76E;
+            padding: 10px;
         }
     }
 }

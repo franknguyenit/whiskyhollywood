@@ -20,14 +20,12 @@
     &__title {
         color: $footer-title-text;
         margin-bottom: 1.5rem;
-        font-size: rem(14);
+        font-size: rem(16);
+        font-weight: 600;
     }
     &__middle-bottom {
         font-size: rem(12);
         border-top: 1px solid $footer-border
-    }
-    &__note {
-        max-width: 65%;
     }
     
 }

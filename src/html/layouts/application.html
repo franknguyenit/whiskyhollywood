@@ -8,10 +8,9 @@
     <title>{% block title %}{{ title }}{% endblock %}</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="format-detection" content="telephone=no">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=vietnamese" rel="stylesheet">
+    <!--link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=vietnamese" rel="stylesheet"-->
     <link rel="stylesheet" href="stylesheets/app.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
     
     {% block head %}{% endblock %}
 </head>
@@ -19,7 +18,7 @@
 <body {% block bodyClass %}{% endblock %}>
     <div id="wrapper">
         {% block header %} {% endblock %}
-        <main id="main-content">
+        <main id="main-content" class="bg-white mx-2">
             {% block content %} {% endblock %}
         </main>
         {% block footer %} {% include "modules/footer.html" %} {% endblock %} {% block javascript %} {% include "modules/javascript.html" %} {% endblock %}
