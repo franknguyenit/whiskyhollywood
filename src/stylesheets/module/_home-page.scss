@@ -3,9 +3,6 @@ body.home {
         display: none;
     }
     @include media-breakpoint-down(sm) {
-        header.header {
-            border-bottom: 1px solid #edeaea;
-        }
         .header__bottom {
             padding: 0
         }

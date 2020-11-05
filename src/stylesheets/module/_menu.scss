@@ -79,6 +79,7 @@
     }
     .back::before {
         @include icon-font('\4a', 1.5rem, 1rem);
+        padding-right: 5px;
     }
 }
 
@@ -86,10 +87,14 @@
     #menu li a {
         font-size: 1rem;
     }
+    #menu{
+        left: 0;
+    }
 }
 
 @include media-breakpoint-up(md) {
     #menu {
         min-width: 400px;
+        left: 0;
     }
 }
