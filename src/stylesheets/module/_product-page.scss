@@ -1,0 +1,100 @@
+ul.timeline{
+    list-style-type: none;
+    position: relative;
+ 
+    &::before {
+        content: ' ';
+        position: absolute;
+        left: 29px;
+        width: 1px;
+        height: 90%;
+        top: 0px;
+        border: 1px dashed $primary;
+    }
+    li{
+        .timeline__content{
+            .timeline__child{
+                display: inline-block;
+                padding: 5px 10px;
+            }
+        }
+        span{
+            display: inline-block;
+            background: #E9D1A6;
+            padding:0.2rem 2rem;
+            font-weight: 700;
+            color: #fff;
+            position: relative;
+            margin-bottom: 10px;
+            &.pink-color{
+                background: #E4A392;
+                &::after {
+                    border-top: 15px solid transparent;
+                    border-bottom: 15px solid transparent;
+                    border-left: 15px solid #E4A392;
+                }
+            }
+            &::before {
+                content: ' ';
+                position: absolute;
+                left: 0;
+                top: 0px;
+                width: 0;
+                height: 0;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-left: 15px solid white;
+            }
+            &::after {
+                content: ' ';
+                position: absolute;
+                right: -15px;
+                top: 0px;
+                width: 0;
+                height: 0;
+                border-top: 15px solid transparent;
+                border-bottom: 15px solid transparent;
+                border-left: 15px solid #e9d1a6;
+            }
+            
+        }
+        margin: 20px 0;
+        padding-left: 5rem;
+        position: relative;
+        &::before {
+            content: ' ';
+            background: white;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid $primary;
+            width: 26px;
+            height: 26px;
+            z-index: 400;
+            top: 0;
+            left: -23px;
+        }
+        &::after {
+            content: ' ';
+            background: $primary;
+            display: inline-block;
+            position: absolute;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            z-index: 400;
+            top: 3px;
+            left: -20px;
+        }
+    }
+} 
+@include media-breakpoint-down(md) {
+    ul.timeline{
+        
+        li{
+           
+            margin: 20px 0;
+            padding-left: 1rem;
+        }
+    } 
+}
