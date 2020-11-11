@@ -1,11 +1,19 @@
 .breadcrumb {
     margin-bottom: 0;
-    font-size: rem(20);
+    font-size: rem(18);
     font-weight: 700;
     a {
         border-bottom: 1px solid transparent;
         &:hover {
             border-bottom-color: $header-bottom-text;
+        }
+    }
+    span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .arrow_carrot-right{
+            padding: 0 1.5rem;
         }
     }
     span.current {
@@ -16,5 +24,10 @@
 @include media-breakpoint-down(sm) {
     .breadcrumb {
         font-size: rem(12);
+        span{
+            .arrow_carrot-right{
+                padding: 0 0.2rem;
+            }
+        }
     }
 }

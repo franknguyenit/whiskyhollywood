@@ -124,7 +124,7 @@
     }
     &__right1{
         position: absolute;
-        top: 0;
+        top: 15px;
         right: 0;
         display: flex;
         -ms-flex-align: center;
@@ -132,6 +132,14 @@
         -ms-flex-pack: center;
         justify-content: center;
     }
+    &__switch-language{
+        .wpml-ls-legacy-dropdown-click{
+            width: auto;
+            font-family: 'helve';
+            font-size: 0.8rem;
+        }
+    }
+
 }
 @include media-breakpoint-down(lg) {
     .header{
@@ -244,16 +252,16 @@
     color: #fff;
     text-align: center;
     .menu-item-has-children{
-        font-size: 20px;
         &::before{
             content: "\33";
             position: absolute;
             right: -12px;
-            top: 27px;
+            top: 26px;
             font-family: ElegantIcons;
             font-size: 1.6rem;
             display: inline-block;
             line-height: 1rem;
+            font-weight: 300;
         }
     }
     li {
@@ -271,10 +279,8 @@
                 opacity: 1;
                 transform: scaleY(1);
                 border-radius: 0;
-                
             }
-        }
-        
+        }  
     }
     a {
         color: inherit;
@@ -283,6 +289,7 @@
         text-decoration: none;
     }
     .dropdown-menu {
+        top: 97%;
         min-width: 285px;
         opacity: 0;
         transform: scaleY(0);
@@ -550,6 +557,9 @@
 
 @include media-breakpoint-down(sm) {
     .header {
+        &__right1{
+            top:25px;
+        }
         &__toggle-menu {
             .fixed-menu & {
                 background-color: transparent;
@@ -564,12 +574,6 @@
             }
             &.active {
                 background: transparent;
-            }
-        }
-        &__top .header__switch-language {
-         
-            a {
-                color: $header-text;
             }
         }
         &__bottom {
@@ -598,8 +602,7 @@
         }
         &__logo1{
             .logo{
-                text-align: center;
-                padding-left: 0;
+                padding-left: 5rem;
             }
         }
     }

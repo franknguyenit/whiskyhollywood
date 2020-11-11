@@ -22,19 +22,19 @@
 .line-title {
     font-family: 'commerceB', sans-serif;
     font-size: rem(28);
-    color: $main-title-text-color;
-    border-bottom: 2px solid $main-title-line-second-color;
+    color: $secondary;
+    border-bottom: 2px solid transparent;
     padding-bottom: 5px;
     position: relative;
     margin-bottom: 2rem;
     &:after {
         position: absolute;
-        height: 2px;
+        height: 4px;
         width: 35%;
         content: '';
         left: 0;
         bottom: -2px;
-        background-color: $main-title-line-color;
+        background-color: $secondary;
     }
     @include media-breakpoint-down(lg) {
         margin-bottom: 1.5rem;
@@ -144,40 +144,61 @@
             font-weight: $font-weight-bold;
         }
         a {
-            border-bottom: 1px solid transparent;
+            transition:none;
+            border: none;
             padding: 0;
             display: block;
             line-height: 1;
             margin: 0 10px;
             color: #fff;
+            background: $primary;
+            
             span {
                 line-height: 1;
             }
-            &:hover {
-                border-color: $header-bottom-text;
+            &:hover,
+            &:focus {
+                background: $primary;
+                color: #fff;
             }
         }
         &.wpml-ls-current-language {
-            font-weight: bold;
-            &:hover a {
+            &:hover .wpml-ls-item-toggle,
+            &:focus .wpml-ls-item-toggle {
                 border-color: transparent;
-                cursor: default;
+                cursor: pointer;
+                background: $primary;
+                color: #fff;
             }
         }
-        &:first-child {
-            position: relative;
-            &:after {
-                content: "|";
-                position: absolute;
-                right: -1px;
-                top: 0px;
-                line-height: 1;
+        .wpml-ls-sub-menu{
+            background: #fff;
+            top: 25px;
+            padding: 5px 0;
+            border: 1px solid rgba(0,0,0,.15);
+            li{
+                &.wpml-ls-item{
+                    &:hover a {
+                        background: #fff;
+                        color: $primary;
+                    }
+                }
+            }
+            .wpml-ls-link{
+                background: #fff;
+                color: #003;
             }
         }
     }
     .wpml-ls-legacy-list-horizontal {
         padding: 0;
     }
+}
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle::after{
+    top: calc(50% - .475em)!important;
+    content: "\33"!important;
+    font-family: ElegantIcons;
+    border: none!important;
 }
 
 .language_mobile {
@@ -410,7 +431,7 @@ body.modal-open {
         span{
             position: relative;
             font-style: italic;
-            font-size: 20px;
+            font-size: 18px;
             color: $secondary;
             &::before,
             &::after
@@ -428,11 +449,19 @@ body.modal-open {
             &::after{
                 right: -87px;
             }
+            @include media-breakpoint-down(sm) {
+                &::before,
+                &::after
+                {
+                    content: none;
+                }
+            }
         }
         h2{
             font-weight: 600;
             text-transform: uppercase;
             line-height: 35px;
+            font-size: 1.7rem;
         }
     }
 }

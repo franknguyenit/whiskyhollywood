@@ -41,11 +41,7 @@ class globalSite {
             $('.overlay-layer').toggleClass('d-block');
             $('.header__menu').toggleClass('menu-active');
             $(this).toggleClass('active');
-            if ($(window).innerWidth() < 767) {
-                var language = $('.header__top .header__switch-language');
-                language.toggleClass('d-block');
-                language.width($('#menu').width() - 32)
-            }
+            
         });
         $('.overlay-layer').click(function() {
             $(this).removeClass('d-block');
@@ -199,7 +195,7 @@ class globalSite {
     }
     static linkTo() {
         $('.link-to').click(function() {
-            var id = $(this).data("id");
+            var id = $(this).find('a').attr('rel');
             $('html, body').animate({
                 scrollTop: ($("#" + id).offset() || { "top": NaN }).top - 45
             }, 500)

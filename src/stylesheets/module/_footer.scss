@@ -6,6 +6,7 @@
         color: $footer-link
     }
     &__link {
+        padding: 0;
         a {
             color: $footer-link;
             border-bottom: 1px solid transparent;
@@ -15,6 +16,7 @@
         }
         li {
             margin-bottom: .5rem;
+            list-style: none;
         }
     }
     &__title {

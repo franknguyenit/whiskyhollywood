@@ -39,6 +39,9 @@
 ul.blog__tag {
     padding-left: 0;
     list-style: none;
+    a{
+        color: $secondary;
+    }
 }
 
 // BLOG DETAILS
