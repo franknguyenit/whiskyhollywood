@@ -107,7 +107,7 @@
 
     $script(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'
     ], 'vendor', function() {
-        $script(['js/slinky.js','js/jquery.validate.js', 'javascripts/app.js'], 'myScript', function() {
+        $script(['js/slinky.js','js/jquery.validate.js', 'js/messages_lang.js','javascripts/app.js'], 'myScript', function() {
             $(function() {
                 window.slinky = $('#menu').slinky();
             });
@@ -115,8 +115,27 @@
     });
 
     $script.ready('myScript', function() {
-
-
+       
+        $("#registerfrm").validate({
+           
+            ignore: [],
+            highlight: function(element, errorClass, validClass) {
+                $(element).parents("div.form-group").addClass("mb-30");
+            },
+            unhighlight: function(element, errorClass, validClass) {
+                $(element).parents("div.form-group").removeClass("mb-30");
+            },
+            submitHandler: function(form) {
+                var string1 = removeSpaces(document.getElementById('mainCaptcha').value);
+                var string2 = removeSpaces(document.getElementById('txtInput').value);
+                if (string1 == string2){
+                submitfrm();
+                addLeadGoogleSheet();
+                }else{       
+                    $("#txtCapcha-error").removeClass("d-none");
+                }
+            }
+        });
     
 		$('#releases__carousel.carousel .carousel-item').each(function() {
 			var minPerSlide = 4;

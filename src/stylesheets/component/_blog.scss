@@ -6,9 +6,11 @@
 }
 
 .blog {
+    &__wrap{
+        border-bottom: 1px solid #e1e1e1;
+    }
     &__title {
         line-height: 1;
-        font-size: 1.5rem;
         a {
             color: $body-color;
             font-weight: $font-weight-bold;
@@ -32,7 +34,7 @@
         text-align: justify;
     }
     &__image {
-        margin-bottom: .5rem
+        margin-bottom: 1rem
     }
 }
 
