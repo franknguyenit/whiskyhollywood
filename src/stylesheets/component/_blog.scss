@@ -35,6 +35,10 @@
     }
     &__image {
         margin-bottom: 1rem
+        img{
+            max-width: 100%;
+            height: auto;
+        }
     }
 }
 
@@ -114,6 +118,9 @@ ul.blog__tag {
         }
         .zalo {
             margin-top: -1px;
+            background: #03A9F4;
+            padding: 3px;
+            border-radius: 4px;
             a {
                 border: 2px solid $body-color;
                 border-radius: 100%;
@@ -126,7 +133,7 @@ ul.blog__tag {
             &_facebook_square {
                 color: #365491
             }
-            &_instagram {
+            &_instagram_square {
                 background: #f09433;
                 background: -moz-linear-gradient(45deg, #405de6 0%, #5851db 15%, #833ab4 25%, #c13584 50%, #e1306c 75%, #fd1d1d 100%);
                 background: -webkit-linear-gradient(45deg, #405de6 0%, #5851db 15%, #833ab4 25%, #c13584 50%, #e1306c 75%, #fd1d1d 100%);

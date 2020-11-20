@@ -64,6 +64,31 @@
 .error{
   color: #ec2525;
 }
+.form{
+  input[type=text]{
+    background: #003;
+    color: #fff;
+    
+  }
+  ::-webkit-input-placeholder { /* Edge */
+    color: #fff;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #fff;
+  }
+  
+  ::placeholder {
+    color: #fff;
+  }
+  .form-control:focus,
+  .select:focus{
+    border-color: $secondary;
+  }
+  .select:after{
+    border-top: 8px solid #ffffff;
+  }
+}
 
 
 @include media-breakpoint-down(xs) {

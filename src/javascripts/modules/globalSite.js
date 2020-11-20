@@ -7,6 +7,13 @@ class globalSite {
         }, 500);
     }
 
+    static moregallery(){
+        $( ".more_gallery" ).click(function() {
+            $(this).hide();
+           $('.gallery').find('.d-none').removeClass('d-none');
+        });
+    }
+
     static checkDevice() {
         let html = $('html');
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -197,7 +204,7 @@ class globalSite {
         $('.link-to').click(function() {
             var id = $(this).find('a').attr('rel');
             $('html, body').animate({
-                scrollTop: ($("#" + id).offset() || { "top": NaN }).top - 45
+                scrollTop: ($("#" + id).offset() || { "top": NaN }).top - 75
             }, 500)
         })
     }

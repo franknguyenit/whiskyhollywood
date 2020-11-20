@@ -424,7 +424,21 @@ body.modal-open {
         top: -5px;
     }
 }
-
+img{
+    max-width: 100%;
+    height: auto;
+}
+.mb-30{
+    margin-bottom: 3rem;
+}
+.download{
+    &__brochure{
+        padding: 10px 20px;
+        background: $secondary;
+        font-weight: 600;
+        color: #fff;
+    }
+}
 .title{
     &__section{
         text-align: center;

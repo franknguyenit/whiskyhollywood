@@ -18,6 +18,7 @@ globalSite.compareSameHeight();
 globalSite.blogDetailsCustom();
 globalSite.scrollToRegister();
 globalSite.linkTo();
+globalSite.moregallery();
 
 for (var i = 0; i < moduleElements.length; i++) {
     const el = moduleElements[i]
