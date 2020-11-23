@@ -434,9 +434,12 @@ img{
 .download{
     &__brochure{
         padding: 10px 20px;
-        background: $secondary;
         font-weight: 600;
         color: #fff;
+        &:hover{
+            text-decoration: underline;
+            color: $secondary;
+        }
     }
 }
 .title{

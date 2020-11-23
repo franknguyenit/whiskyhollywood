@@ -1,56 +1,27 @@
-@media (min-width: 768px) {
-    .releases {
-        .carousel-item-right.active,
-        .carousel-item-next {
-            transform: translateX(50%);
-        }
-        .carousel-item-left.active,
-        .carousel-item-prev {
-            transform: translateX(-50%);
-        }
-    }
-    
-}
 
-/* large - display 3 */
-@media (min-width: 992px) {
-    .releases {
-        .carousel-item-right.active,
-        .carousel-item-next {
-            transform: translateX(33%);
-        }
-        .carousel-item-left.active,
-        .carousel-item-prev {
-            transform: translateX(-33%);
-        }
-    }  
-}
+$fragment_width: 25%;
 
-@media (max-width: 768px) {
-    .releases {
-        .carousel-item>div {
-            display: none;
-        }
-        .carousel-item>div:first-child {
-            display: block;
-        }
-    } 
-}
-.releases {
-    .carousel-item-right,
-    .carousel-item-left {
-        transform: translateX(0);
-    }
-    .carousel-item.active,
-    .carousel-item-next,
-    .carousel-item-prev{
-        display: flex;
-    }
-    .carousel-control-prev,
+.show-neighbors {
+  overflow: hidden;
+  padding-bottom: 30px;
+  .item__third:first-child, 
+  .item__third:last-child {
+    display: none;
+  }
+  .carousel-control-prev,
     .carousel-control-next{
         width: 15%;
         opacity: 1;
         font-size: 2.2rem;
+        color: $secondary;
+    }
+  .carousel-indicators{
+    position: absolute;
+}
+  @media (min-width: 500px) {
+    .carousel-indicators {
+      margin-right: $fragment_width;
+      margin-left: $fragment_width;
     }
     .carousel-control-prev{
         background: linear-gradient(90deg, #000033 50%, #ffffff00 100% );
@@ -58,9 +29,31 @@
     .carousel-control-next{
         background: linear-gradient(-90deg, #000033 50%, #ffffff00 100% );
     }
-    .carousel-indicators{
-        margin-top: 35px;
+
+    .carousel-inner {
+      width: (100% - 2 * $fragment_width) * 3;
+      left: 3 * $fragment_width - 100%;
     }
+
+    .carousel-item-next:not(.carousel-item-left),
+    .carousel-item-right.active {
+      -webkit-transform: translate3d(33%, 0, 0);
+      transform: translate3d(33%, 0, 0);
+    }
+
+    .carousel-item-prev:not(.carousel-item-right),
+    .carousel-item-left.active {
+      -webkit-transform: translate3d(-33%, 0, 0);
+      transform: translate3d(-33%, 0, 0);
+    }
+    
+    .item__third {
+      display: block !important;
+      float: left;
+      position: relative; 
+      width: 33.33333333%;
+    }
+  }
 }
 .carousel-indicators {
     position: static;

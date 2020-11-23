@@ -299,55 +299,63 @@
         <h2 class="mb-4 mb-md-5">PRESS RELEASES</h2>
     </div>
 </div>
-<section class="releases bg-primary py-5">
-    <div id="releases__carousel" class="carousel slide w-100" data-ride="carousel" data-interval="false">
-        <div class="releases__listbox carousel-inner w-100" role="listbox">
-            <div class=" carousel-item active">
-                <div class="col-lg-4 col-md-6">
-                    <div class="releases__card">
-                        <img class="img-fluid px-3" src="../images/20.png">
-                        <h4>title news</h4>
-                        <a href="#!" class="btn btn-secondary font-weight-bold">Read the Article</a>
-                    </div>
+
+
+<section id="slider" class="slideshow carousel slide bg-primary py-5" data-ride="carousel">
+   
+        <div id="releases__carousel" class="carousel slide show-neighbors" data-ride="carousel">
+      
+          <ol class="carousel-indicators">
+            <li data-target="#releases__carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#releases__carousel" data-slide-to="1"></li>
+            <li data-target="#releases__carousel" data-slide-to="2"></li>
+          </ol>
+      
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="item__third">
+                <div class="releases__card">
+                    <img class="img-fluid px-3" src="../images/20.png">
+                    <h4>title news</h4>
+                    <a href="#!" class="btn btn-secondary font-weight-bold">Read the Article</a>
                 </div>
+              </div>
             </div>
             <div class="carousel-item">
-                <div class="col-lg-4 col-md-6">
-                    <div class="releases__card">
-                        <img class="img-fluid px-3" src="../images/21.png">
-                        <h4>title news</h4>
-                        <a href="#!" class="btn btn-secondary font-weight-bold">Read the Article</a>
-                    </div>
+              <div class="item__third">
+                <div class="releases__card">
+                    <img class="img-fluid px-3" src="../images/21.png">
+                    <h4>title news</h4>
+                    <a href="#!" class="btn btn-secondary font-weight-bold">Read the Article</a>
                 </div>
+              </div>
             </div>
             <div class="carousel-item">
-                <div class="col-lg-4 col-md-6">
-                    <div class="releases__card">
-                        <img class="img-fluid px-3" src="../images/22.png">
-                        <h4>title news</h4>
-                        <a href="#!" class="btn btn-secondary font-weight-bold">Read the Article</a>
-                    </div>
+              <div class="item__third">
+                <div class="releases__card">
+                    <img class="img-fluid px-3" src="../images/22.png">
+                    <h4>title news</h4>
+                    <a href="#!" class="btn btn-secondary font-weight-bold">Read the Article</a>
                 </div>
+              </div>
             </div>
-        </div>
-        <a class="carousel-control-prev " href="#releases__carousel" role="button" data-slide="prev">
+          </div>
+      
+          <a class="carousel-control-prev h1" href="#releases__carousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"><i class="icon-prev arrow_carrot-left_alt2"></i></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next " href="#releases__carousel" role="button" data-slide="next">
+        <a class="carousel-control-next h1" href="#releases__carousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"><i class="icon-prev arrow_carrot-right_alt2"></i></span>
             <span class="sr-only">Next</span>
         </a>
-        <ul class="carousel-indicators">
-            <li data-target="#releases__carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#releases__carousel" data-slide-to="1" class=""></li>
-            <li data-target="#releases__carousel" data-slide-to="2" class=""></li>
-        </ul>
-    </div>
-    <div class="releases__gradient">
       
-    </div>
+        </div>
+      
+    
 </section>
+
+
 
 
 
@@ -675,6 +683,11 @@
         </div>
     </div>
 </section>
+<div class="text-center py-4 bg-primary">
+    <a href="https://www.whiskyhollywood.com/wp-content/uploads/2020/11/whisky-hotel.pdf" class="download__brochure" download="https://www.whiskyhollywood.com/wp-content/uploads/2020/11/whisky-hotel.pdf">
+        <span aria-hidden="true" class="icon_download pr-2"></span> Download brochure of Whisky Hotel in Hollywood
+     </a>
+</div>
 
 {% include "modules/component/register-footer.html" %}
 <!-- end register -->
