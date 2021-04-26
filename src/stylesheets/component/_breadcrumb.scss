@@ -3,14 +3,14 @@
     font-weight: 700;
     a {
         border-bottom: 1px solid transparent;
+        color: $primary;
         &:hover {
             border-bottom-color: $header-bottom-text;
+            color: $secondary;
+            text-decoration: none;
         }
     }
     span{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         .arrow_carrot-right{
             padding: 0 1.5rem;
         }

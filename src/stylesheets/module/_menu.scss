@@ -55,6 +55,8 @@
         font-weight: $font-weight-bold;
         padding: $nav-link-padding-y $nav-link-padding-x;
         font-size: rem(20);
+        color: $primary;
+        text-decoration: none;
         &.back {
             width: 100%;
             line-height: 1.2;

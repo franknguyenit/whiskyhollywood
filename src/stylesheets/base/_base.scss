@@ -61,7 +61,8 @@ ul.select-options{
 
 a {
     transition: $transition-base;
+    color: $secondary;
     @include hover-focus-active {
-        text-decoration: none;
+        color: $secondary;
     }
 }

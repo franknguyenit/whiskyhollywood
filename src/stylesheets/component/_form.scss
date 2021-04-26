@@ -65,10 +65,9 @@
   color: #ec2525;
 }
 .form{
-  input[type=text]{
+  input[type=text], input[type=email], input[type=tel]{
     background: #003;
     color: #fff;
-    
   }
   ::-webkit-input-placeholder { /* Edge */
     color: #fff;
