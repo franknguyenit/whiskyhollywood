@@ -107,7 +107,7 @@
 
     $script(['https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'
     ], 'vendor', function() {
-        $script(['js/slinky.js','js/jquery.validate.js', 'js/messages_lang.js','javascripts/app.js'], 'myScript', function() {
+        $script(['js/slinky.js','js/jquery.validate.js', 'js/countrypicker.js', 'javascripts/app.js'], 'myScript', function() {
             $(function() {
                 window.slinky = $('#menu').slinky();
             });
@@ -115,6 +115,8 @@
     });
 
     $script.ready('myScript', function() {
+       
+
         $("#registerfrm").validate({
             ignore: [],
             highlight: function(element, errorClass, validClass) {
